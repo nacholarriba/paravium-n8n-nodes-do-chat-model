@@ -1,6 +1,6 @@
 {
   "name": "@paravium/n8n-nodes-do-chat-model",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "n8n community sub-node that exposes DigitalOcean Gradient Serverless Inference as a LangChain Chat Model for the AI Agent.",
   "keywords": [
     "n8n-community-node-package",
