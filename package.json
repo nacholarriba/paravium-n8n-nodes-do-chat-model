@@ -1,0 +1,67 @@
+{
+  "name": "@paravium/n8n-nodes-do-chat-model",
+  "version": "0.1.0",
+  "description": "n8n community sub-node that exposes DigitalOcean Gradient Serverless Inference as a LangChain Chat Model for the AI Agent.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "langchain",
+    "digitalocean",
+    "gradient",
+    "serverless-inference",
+    "llm",
+    "chat-model"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/paravium/paravium-n8n-nodes-do-chat-model",
+  "author": {
+    "name": "Paravium",
+    "email": "hello@paravium.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paravium/paravium-n8n-nodes-do-chat-model.git"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && copyfiles \"nodes/**/*.{svg,json,png}\" dist",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lint:fix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/DigitalOceanInferenceApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/LmChatDigitalOcean/LmChatDigitalOcean.node.js"
+    ]
+  },
+  "dependencies": {
+    "@langchain/openai": "^0.3.0",
+    "@langchain/core": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^9.16.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}

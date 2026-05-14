@@ -1,0 +1,13 @@
+credentials/
+nodes/
+node_modules/
+.github/
+.gitignore
+.npmignore
+tsconfig.json
+*.tsbuildinfo
+src/
+.editorconfig
+.eslintrc*
+.prettierrc*
+eslint.config.*
