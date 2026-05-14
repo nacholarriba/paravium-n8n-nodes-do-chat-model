@@ -1,0 +1,13 @@
+import eslintPluginN8nNodesBase from 'eslint-plugin-n8n-nodes-base';
+
+export default [
+	{
+		files: ['nodes/**/*.ts', 'credentials/**/*.ts', 'package.json'],
+		plugins: {
+			'n8n-nodes-base': eslintPluginN8nNodesBase,
+		},
+		rules: {
+			...eslintPluginN8nNodesBase.configs.community.rules,
+		},
+	},
+];
